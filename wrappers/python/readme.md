@@ -85,12 +85,12 @@ try:
             for x in xrange(640):
                 dist = depth.get_distance(x, y)
                 if 0 < dist and dist < 1:
-                    coverage[x/10] += 1
+                    coverage[x//10] += 1
 
             if y%20 is 19:
                 line = ""
                 for c in coverage:
-                    line += " .:nhBXWW"[c/25]
+                    line += " .:nhBXWW"[c//25]
                 coverage = [0]*64
                 print(line)
 
